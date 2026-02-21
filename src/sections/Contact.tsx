@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Copy, Check, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const EMAIL = "damianfaye1@gmail.com";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -46,7 +48,7 @@ export default function Contact() {
           }`}
         >
           <h2 className="text-3xl lg:text-4xl font-normal tracking-[-0.01em] text-[#1a1a1a]">
-            Let's talk
+            {t("contact.title")}
           </h2>
         </div>
 
@@ -69,7 +71,7 @@ export default function Contact() {
               <>
                 <Check size={18} className="text-[#7c9a92]" />
                 <span className="text-lg font-medium text-white tracking-[-0.01em]">
-                  Copied
+                  {t("contact.copied")}
                 </span>
               </>
             ) : (
@@ -90,7 +92,7 @@ export default function Contact() {
             className="inline-flex items-center gap-1.5 text-sm text-[#666666] hover:text-[#1a1a1a] transition-colors"
           >
             <Mail size={13} />
-            Open in mail app
+            {t("contact.openMail")}
           </a>
         </div>
       </div>

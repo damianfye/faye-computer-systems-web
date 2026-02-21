@@ -1,10 +1,13 @@
-const footerLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const footerLinks = [
+    { label: t("nav.services"), href: "#services" },
+    { label: t("nav.approach"), href: "#approach" },
+    { label: t("nav.contact"), href: "#contact" },
+  ];
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -23,9 +26,7 @@ export default function Footer() {
               alt="Faye Computer Systems"
               className="h-6"
             />
-            <p className="text-sm text-[#999999]">
-              &copy; 2026 Faye Computer Systems
-            </p>
+            <p className="text-sm text-[#999999]">{t("footer.copyright")}</p>
           </div>
 
           {/* Navigation Links */}

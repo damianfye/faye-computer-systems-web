@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // Abstract SVG illustrations for each card
 const AuditIllustration = () => (
@@ -328,6 +329,7 @@ function Card({
 }
 
 export default function BentoFeatures() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -365,7 +367,7 @@ export default function BentoFeatures() {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            How we work
+            {t("services.title")}
           </h2>
           <p
             className={`text-[#666666] leading-relaxed transition-all duration-700 ${
@@ -375,29 +377,29 @@ export default function BentoFeatures() {
             }`}
             style={{ transitionDelay: "100ms" }}
           >
-            A clear path from discovery to ownership.
+            {t("services.subtitle")}
           </p>
         </div>
 
         {/* Equal Grid — 3 cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card
-            title="1. Audit"
-            description="We map your processes, score each step on automation potential, and deliver a prioritized roadmap."
+            title={t("services.audit.title")}
+            description={t("services.audit.description")}
             illustration={<AuditIllustration />}
             delay={0}
             isVisible={isVisible}
           />
           <Card
-            title="2. Build"
-            description="Custom APIs, AI agents, and automation pipelines wired into your existing tools."
+            title={t("services.build.title")}
+            description={t("services.build.description")}
             illustration={<BuildIllustration />}
             delay={100}
             isVisible={isVisible}
           />
           <Card
-            title="3. Transfer"
-            description="We train your team, document everything, and set up monitoring. You own it. We step back."
+            title={t("services.transfer.title")}
+            description={t("services.transfer.description")}
             illustration={<TransferIllustration />}
             delay={200}
             isVisible={isVisible}

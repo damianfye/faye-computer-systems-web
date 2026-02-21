@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Faye Computer Systems — AI Integration for Business",
+    "description": "We audit your workflows, build automation, and hand it over. Practical AI systems for businesses."
+  },
+  "nav": {
+    "services": "Services",
+    "approach": "Approach",
+    "contact": "Contact",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "headline": "We automate what slows you down",
+    "subheadline": "We spot what wastes your time and automate it.",
+    "cta": "See how we work"
+  },
+  "services": {
+    "title": "How we work",
+    "subtitle": "From audit to handover, three steps.",
+    "audit": {
+      "title": "1. Audit",
+      "description": "We map your workflows, flag what can be automated, and deliver a ranked action plan."
+    },
+    "build": {
+      "title": "2. Build",
+      "description": "Custom APIs, AI agents, and pipelines — built on top of your current stack."
+    },
+    "transfer": {
+      "title": "3. Transfer",
+      "description": "We document everything, train your team, and hand over the keys. It's yours."
+    }
+  },
+  "philosophy": {
+    "heading": "Built around <accent>how you already work</accent>",
+    "body": "We watch how your team actually works, find where time leaks, and automate those exact steps.",
+    "secure": {
+      "title": "Secure and local-first",
+      "description": "Your data stays yours. We run on-premise when it matters."
+    },
+    "control": {
+      "title": "Your team stays in control",
+      "description": "AI handles the volume. Your people make the calls."
+    },
+    "compound": {
+      "title": "Gains that stack",
+      "description": "Each automation runs daily. The value adds up."
+    }
+  },
+  "contact": {
+    "title": "Let's talk",
+    "copied": "Copied",
+    "openMail": "Open in mail app"
+  },
+  "footer": {
+    "copyright": "© 2026 Faye Computer Systems"
+  }
+}

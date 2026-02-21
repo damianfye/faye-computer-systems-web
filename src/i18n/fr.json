@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "title": "Faye Computer Systems — Intégration IA pour les entreprises",
+    "description": "On audite vos flux, on construit l'automatisation, et on vous la livre. Des systèmes IA concrets pour les entreprises."
+  },
+  "nav": {
+    "services": "Services",
+    "approach": "Approche",
+    "contact": "Contact",
+    "cta": "Nous contacter"
+  },
+  "hero": {
+    "headline": "On automatise ce qui vous ralentit",
+    "subheadline": "On repère ce qui vous fait perdre du temps et on l'automatise.",
+    "cta": "Voir comment on travaille"
+  },
+  "services": {
+    "title": "Comment on travaille",
+    "subtitle": "De l'audit au transfert, en trois étapes.",
+    "audit": {
+      "title": "1. Audit",
+      "description": "On cartographie vos flux, on repère ce qui peut être automatisé, et on livre un plan d'action classé par priorité."
+    },
+    "build": {
+      "title": "2. Construction",
+      "description": "APIs sur mesure, agents IA et pipelines — construits par-dessus votre stack actuel."
+    },
+    "transfer": {
+      "title": "3. Transfert",
+      "description": "On documente tout, on forme votre équipe, et on vous passe les clés. C'est à vous."
+    }
+  },
+  "philosophy": {
+    "heading": "Conçu autour de <accent>votre façon de travailler</accent>",
+    "body": "On observe comment votre équipe travaille au quotidien, on repère les pertes de temps, et on automatise ces étapes précises.",
+    "secure": {
+      "title": "Sécurisé et local d'abord",
+      "description": "Vos données restent les vôtres. On tourne en local quand c'est nécessaire."
+    },
+    "control": {
+      "title": "Votre équipe garde le contrôle",
+      "description": "L'IA gère le volume. Vos équipes prennent les décisions."
+    },
+    "compound": {
+      "title": "Des gains qui s'additionnent",
+      "description": "Chaque automatisation tourne au quotidien. La valeur s'accumule."
+    }
+  },
+  "contact": {
+    "title": "Discutons",
+    "copied": "Copié",
+    "openMail": "Ouvrir dans l'app mail"
+  },
+  "footer": {
+    "copyright": "© 2026 Faye Computer Systems"
+  }
+}

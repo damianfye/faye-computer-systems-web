@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import { Wrench, Users, TrendingUp } from "lucide-react";
+import { Lock, Users, TrendingUp } from "lucide-react";
+import { Trans, useTranslation } from "react-i18next";
 
 export default function Philosophy() {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -43,8 +45,10 @@ export default function Philosophy() {
                   : "opacity-0 translate-y-6"
               }`}
             >
-              Built around{" "}
-              <span className="text-[#7c9a92]">how you already work</span>
+              <Trans
+                i18nKey="philosophy.heading"
+                components={{ accent: <span className="text-[#7c9a92]" /> }}
+              />
             </h2>
           </div>
 
@@ -58,9 +62,7 @@ export default function Philosophy() {
               }`}
               style={{ transitionDelay: "150ms" }}
             >
-              We study your daily operations, find where time gets wasted, and
-              automate those specific tasks. No new tools to learn, it plugs
-              into what you already use.
+              {t("philosophy.body")}
             </p>
 
             {/* Principles — bento cards */}
@@ -74,13 +76,13 @@ export default function Philosophy() {
             >
               <div className="bg-white rounded-xl border border-black/[0.06] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                 <div className="w-8 h-8 rounded-lg bg-[#7c9a92]/10 flex items-center justify-center mb-3">
-                  <Wrench size={16} className="text-[#7c9a92]" />
+                  <Lock size={16} className="text-[#7c9a92]" />
                 </div>
                 <div className="text-sm font-medium text-[#1a1a1a] mb-1">
-                  Simplest tool that works
+                  {t("philosophy.secure.title")}
                 </div>
                 <div className="text-sm text-[#666666]">
-                  If a script solves it, we don't build a model.
+                  {t("philosophy.secure.description")}
                 </div>
               </div>
               <div className="bg-white rounded-xl border border-black/[0.06] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
@@ -88,10 +90,10 @@ export default function Philosophy() {
                   <Users size={16} className="text-[#7c9a92]" />
                 </div>
                 <div className="text-sm font-medium text-[#1a1a1a] mb-1">
-                  Your team stays in control
+                  {t("philosophy.control.title")}
                 </div>
                 <div className="text-sm text-[#666666]">
-                  AI handles the volume. Your people make the calls.
+                  {t("philosophy.control.description")}
                 </div>
               </div>
               <div className="bg-white rounded-xl border border-black/[0.06] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
@@ -99,10 +101,10 @@ export default function Philosophy() {
                   <TrendingUp size={16} className="text-[#7c9a92]" />
                 </div>
                 <div className="text-sm font-medium text-[#1a1a1a] mb-1">
-                  Results that compound
+                  {t("philosophy.compound.title")}
                 </div>
                 <div className="text-sm text-[#666666]">
-                  Automations that run daily and stack over time.
+                  {t("philosophy.compound.description")}
                 </div>
               </div>
             </div>
