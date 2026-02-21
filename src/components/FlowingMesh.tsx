@@ -199,9 +199,13 @@ function MeshPlane({ scrollProgress }: { scrollProgress: number }) {
 
 interface FlowingMeshProps {
   scrollProgress?: number;
+  onReady?: () => void;
 }
 
-export default function FlowingMesh({ scrollProgress = 0 }: FlowingMeshProps) {
+export default function FlowingMesh({
+  scrollProgress = 0,
+  onReady,
+}: FlowingMeshProps) {
   return (
     <div className="absolute inset-0 w-full h-full">
       <Canvas
@@ -212,6 +216,7 @@ export default function FlowingMesh({ scrollProgress = 0 }: FlowingMeshProps) {
           alpha: true,
           powerPreference: "high-performance",
         }}
+        onCreated={() => onReady?.()}
       >
         <MeshPlane scrollProgress={scrollProgress} />
         <EffectComposer>

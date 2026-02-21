@@ -6,6 +6,7 @@ import FlowingMesh from "../components/FlowingMesh";
 export default function Hero() {
   const { t } = useTranslation();
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isReady, setIsReady] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -34,11 +35,14 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100dvh] flex flex-col bg-grid overflow-hidden"
+      className={`relative min-h-[100dvh] flex flex-col bg-grid overflow-hidden transition-opacity duration-300 ${isReady ? "opacity-100" : "opacity-0"}`}
     >
       {/* WebGL Animation Container */}
       <div className="absolute inset-0 w-full h-full">
-        <FlowingMesh scrollProgress={scrollProgress} />
+        <FlowingMesh
+          scrollProgress={scrollProgress}
+          onReady={() => setIsReady(true)}
+        />
       </div>
 
       {/* Content */}
