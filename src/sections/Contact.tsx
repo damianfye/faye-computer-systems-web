@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Copy, Check, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-const EMAIL = "damianfaye1@gmail.com";
+const EMAIL = "damian@fayecomputer.systems";
 
 export default function Contact() {
   const { t } = useTranslation();
